@@ -1,0 +1,37 @@
+# Header
+menu:        # 博客右上角的菜單欄， 暫時使用默認值
+  Home: /    # 首頁
+  Archives: /archives    # 歸檔
+rss: /atom.xml           # 關於
+
+# Content
+excerpt_link: Read More  # 文章下的的 Read more, 就可以改爲閱讀全文
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:                 # 站點右邊欄
+- category               # 分類
+- tag
+- tagcloud               # 標籤暈
+- archive
+- recent_posts
+- links                  # 新添加的外鏈
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png   # 圖片效果
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
