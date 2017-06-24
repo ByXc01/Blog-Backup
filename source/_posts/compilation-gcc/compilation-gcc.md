@@ -9,7 +9,7 @@ tags: gcc
 
 <!--more-->
 
-我是在[清華大學鏡像源](https://mirrors.tuna.tsinghua.edu.cn/ "清華大學鏡像源") 下載了 gmp、mpfr、mpc、gcc的包。因第一次是直接在下在[gnu官網](ftp:gnu.org/gnu/ "gnu官網")，下載實在是太慢了。 而且上次編譯的時候還是直接是
+我是在[清華大學鏡像源](https://mirrors.tuna.tsinghua.edu.cn/ "清華大學鏡像源") 下載了 gmp、mpfr、mpc、gcc的包。因第一次是直接在下在[gnu官網](http://ftp.gnu.org/gnu/ "gnu官網")，下載實在是太慢了。 而且上次編譯的時候還是直接是
 ``` bash
     ./download_prerequisites
     ./configure
