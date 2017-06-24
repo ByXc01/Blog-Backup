@@ -15,7 +15,7 @@ tags: 空字符
 	 * Author: ByXc
 	 * About: reverse
 	 * Version: 1.0
-	 * Compilation: gcc 5.3.0 for MinGw
+	 * Compiler: gcc 5.1.0 for MinGw
 	 * Date: 20170513
 	 * Github: ByXc01
 	 * Blog: http://ByXc01.github.io
