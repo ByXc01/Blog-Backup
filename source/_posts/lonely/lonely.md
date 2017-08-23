@@ -1,7 +1,7 @@
 ---
 title: lonely
 date: 2017-07-14 20:23:24
-tags: 随笔
+tags: 隨筆
 ---
 
 ## bug ##
@@ -45,17 +45,17 @@ tags: 随笔
     #include <stdio.h>
     int main(void)
     {
-    	char outbuf[512];
+        char outbuf[512];
     
-    	setvbuf(stdout, outbuf, _IOFBF, 512);
+        setvbuf(stdout, outbuf, _IOFBF, 512);
     
-    	puts("This is a test of buffer output.");
-    	puts(outbuf);
+        puts("This is a test of buffer output.");
+        puts(outbuf);
     
-    	fflush(stdout);
-    	puts(outbuf);
+        fflush(stdout);
+        puts(outbuf);
     
-    	return 0;
+        return 0;
     }
 ```
 
