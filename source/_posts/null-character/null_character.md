@@ -45,11 +45,11 @@ tags: 空字符
 ```
 這個程序很簡單， 是 《*c primer plus*》 第六章的一道編程練習題， 輸入一個字符串， 程序將字符串倒序輸出。 剛開始我沒有用 `i_count - 1`， 覺得有點奇怪，怎麼倒序輸出的字符串有一個 **“空格”**， 輸出如下：
 
-![空字符](http://opkl2tvjd.bkt.clouddn.com/null_string.png "空字符")
+![空字符](https://github.com/ByXc01/Blog-image/raw/master/null_character/null_string1.png "空字符")
 
 **後來測試了幾個平台， 在 windows 環境下是會輸出一個類似格的字符， 為什麼說是類似呢？ `if (*(ch_string + 4) == ' ')` 表達式為假。 在 Linux 環境下則輸出為不可見得（Windows 上用 msym2 輸出也是不可見的):**
 
-![空字符](http://opkl2tvjd.bkt.clouddn.com/null_string2.png "空字符")
+![空字符](https://github.com/ByXc01/Blog-image/raw/master/null_character/null_string2.png "空字符")
 
 因為折騰的蠻久的， 印象也特別深刻。
 
@@ -70,7 +70,7 @@ tags: 空字符
 
 **所有未被使用的元素都會自動初始化為 0 （這裡的 0 指的是 char 形式的空字符， 不是數字字符 0)**
 
-![空字符](http://opkl2tvjd.bkt.clouddn.com/null_strin3.png "空字符")
+![空字符](https://github.com/ByXc01/Blog-image/raw/master/null_character/null_string3.png "空字符")
 
 讓我感覺想不通的還是程序清單 11.13 的輸出:
 ```c
@@ -102,11 +102,11 @@ tags: 空字符
 
 然後我又在 armv7l（gcc 6.1.0), aarch64(gcc 6.1.0), x64(gcc 6.3.0) ubuntu(gcc 6.3.0)執行了一遍。結果都是 WOW! 無論是 puts() 還是 printf() 都是一樣。 用 `gcc -S` 編譯出來的彙編我也看了一下， 似乎編譯器也沒自動添加一個空字符啊。
 
-![沒有自動添加空字符啊](http://opkl2tvjd.bkt.clouddn.com/character_array.png "沒有自動添加空字符啊")
+![沒有自動添加空字符啊](https://github.com/ByXc01/Blog-image/raw/master/null_character/character_array.png "沒有自動添加空字符啊")
 
 可能真是有關于編譯器吧， 我用 ubuntu(clang 3.8.0) 輸出跟書上一樣:
 
-![clang](http://opkl2tvjd.bkt.clouddn.com/null_string4.png "clang")
+![clang](https://github.com/ByXc01/Blog-image/raw/master/null_character/null_string4.png "clang")
 
 用 `clang -S` 編譯出來的彙編如下：
 

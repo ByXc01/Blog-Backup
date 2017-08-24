@@ -152,25 +152,25 @@ tags: 尾遞歸
 
 沒開編譯優化：
 
-![沒開編譯優化](http://opkl2tvjd.bkt.clouddn.com/not_o2.png "沒開編譯優化")
+![沒開編譯優化](https://github.com/ByXc01/Blog-image/raw/master/tail_recusion/not_o2.png "沒開編譯優化")
 
 但如果開優化的話： `gcc -Wall -O2 factorial_tail.c`， 上面的程序最後就能正常運行。
 
 開了`-O2` 編譯優化:
 
-![開了 -O2 編譯優化](http://opkl2tvjd.bkt.clouddn.com/02.png "開了 -O2 編譯優化")
+![開了 -O2 編譯優化](https://github.com/ByXc01/Blog-image/raw/master/tail_recusion/02.png "開了 -O2 編譯優化")
 
 **這裡面的原因就在於，尾遞歸的寫法只是具備了使用當前函數在調用下一個函數前把當前占有的棧銷毀，但是會不會真的這樣做，具體要看編譯器是否這樣做，如果在語言層面上，沒有規定要優化這種為調用，那編譯器就可以有自己的選擇來做不同的實現，在這種情況下，尾遞歸就不能一定解決一般遞歸的問題。**
 
 我們可以先看看上面的例子在開優化與未開優化的情況，編譯出來的彙編代碼有設麼不同，首先是沒開優化編譯出來factorial_tail.c 的匯編代碼 
 
-![沒開優化彙編](http://opkl2tvjd.bkt.clouddn.com/not_no2s.png "沒開優化彙編")
+![沒開優化彙編](https://github.com/ByXc01/Blog-image/raw/master/tail_recusion/not_no2s.png "沒開優化彙編")
 
 **注意上面 `tail_func` 函數中的 `call` 語句， call 指令就是直接進行了函數調用，它會先壓棧，然後再 `jmp` 去 `tail_func`， 而當前額棧還在用！就是說，尾遞歸的作用沒有發揮。**
 
 我們在看看開了優化得到的彙編:
 
-![開了優化彙編](http://opkl2tvjd.bkt.clouddn.com/o2eds.png "開了優化彙編")
+![開了優化彙編](https://github.com/ByXc01/Blog-image/raw/master/tail_recusion/o2eds.png "開了優化彙編")
 
 注意 `tail_func` 函數彙編中 `imull %ecx, %eax` 和 `jne .L3`。`tail_func()` 裡面沒有函數調用！它只是把當前函數的第二個參數改了一下，直接就又跳到函數開始的地方。此處的實現本質其實就是： 下一個函數調用繼續延用了當前的棧!
 

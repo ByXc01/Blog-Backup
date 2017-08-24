@@ -19,6 +19,6 @@ C11 K.3.5.7.1 The gets_s function 代碼如下:
 
 在 《*c primer plus*》 也沒過多的介紹。
 
-![get_s() 介紹](http://opkl2tvjd.bkt.clouddn.com/gets_s.png "gets_s()介紹")
+![gets_s() 介紹](https://github.com/ByXc01/Blog-image/raw/master/gets_s/gets_s.png "gets_s()介紹")
 
 詳細可查看[C 語言參考手冊](http://zh.cppreference.com/w/c/io/gets "C 語言查考手冊")

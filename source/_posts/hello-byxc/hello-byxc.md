@@ -26,4 +26,4 @@ tags: hello
 * 初學者會敲個 hello world 不丟人把，剛接觸markdown寫的不好也就這樣了。
 * 附上logo：
 
- ![](http://opkl2tvjd.bkt.clouddn.com/17-5-7/94556521-file_1494140192949_4bbe.jpg)
+ ![ByXc](https://github.com/ByXc01/Blog-image/raw/master/logo/logo.jpg "ByXc")

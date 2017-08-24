@@ -88,7 +88,7 @@ tags: 源碼 反碼 補碼
 
 ### 疑惑
 本人學C語言是看書入門的， c primer plus是一本很好的入門書。書中第六章的“6.2.1 終止 while 循環”有個問題就是一個變量自減特定次后會從負數變成正數，讓後終止循環。
-![c primer plus](http://opkl2tvjd.bkt.clouddn.com/while.png "while")
+![c primer plus](https://github.com/ByXc01/Blog-image/raw/master/binary/while.png "while")
 測試了一下， 果真如此。代碼如下：
 ``` c
     // while.c
@@ -105,7 +105,7 @@ tags: 源碼 反碼 補碼
     }
 ```
 輸出如下：
-![program](http://opkl2tvjd.bkt.clouddn.com/while2.png "while test")
+![program](https://github.com/ByXc01/Blog-image/raw/master/binary/while2.png "while test")
 **很明顯迭代的退出`index`的值是 127。 127 < 5 表達式的值為0。`signed char`一字節（八位），從左往右第一位是符號位。負數用補碼存儲。範圍是 -2^(8-1) ~ 2^(8-1)-1， 即 -128 ~ 127。**
 很好， 有點眉頭了。
 
@@ -123,7 +123,7 @@ tags: 源碼 反碼 補碼
     }
 ```
 輸出如下：
-![limit](http://opkl2tvjd.bkt.clouddn.com/limit1.png "ByXc")
+![limit](https://github.com/ByXc01/Blog-image/raw/master/binary/limit.png "ByXc")
 由例1已知， -1 的補碼是 1111 1111。如果是按有符號解析的話，第一位是符號位（為負），其餘是數值位。所以正是-1。但如果是無符號為的話，八位全是數值位，即是255。
 還沒完咧， 繼續往下看：
 ``` c
@@ -151,7 +151,7 @@ tags: 源碼 反碼 補碼
     }
 ```
 輸出以下：
-![limit2](http://opkl2tvjd.bkt.clouddn.com/limit2.png "ByXc")
+![limit2](https://github.com/ByXc01/Blog-image/raw/master/binary/limit2.png "ByXc")
 好吧，終於警告了。
 我只把`char`類型的解釋一下， 其它的整數類型也一樣，就不作重複解釋了。以下是本人的瞎解釋，歡迎指出錯誤。
 

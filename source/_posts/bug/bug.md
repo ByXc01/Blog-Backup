@@ -1,5 +1,5 @@
 ---
-title: debug
+title: bug
 date: 2017-05-27 01:33:41
 tags: 隨筆
 ---
